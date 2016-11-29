@@ -3,7 +3,8 @@
 
 int main() {
 
-    std::cout << "Add 1: " << MyLibrary::addOne(1) << std::endl;
+    const MyLibrary myLib(2);
+    std::cout << "Stored value is: " << myLib.getInt() << std::endl;
 
     return 0;
 }
