@@ -1,6 +1,10 @@
 #include "MyLibrary.h"
 
-int MyLibrary::addOne(int input) {
-    return ++input;
+MyLibrary::MyLibrary(int storedValue) {
+    mValue = storedValue;
+}
+
+int MyLibrary::getInt() const {
+    return mValue;
 }
 

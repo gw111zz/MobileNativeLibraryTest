@@ -4,8 +4,13 @@
 class MyLibrary {
 
 public:
+    MyLibrary(int storedValue);
 
-    static int addOne(int input);
+    int getInt() const;
+
+private:
+
+    int mValue;
 
 };
 
