@@ -1,10 +1,19 @@
 #include "MyLibrary.h"
 
-MyLibrary::MyLibrary(int storedValue) {
-    mValue = storedValue;
+MyLibrary::MyLibrary(int initialValue)
+: mValue(initialValue) {
 }
 
-int MyLibrary::getInt() const {
+int MyLibrary::getValue() const {
     return mValue;
 }
+
+void MyLibrary::addOne() {
+    ++mValue;
+}
+
+void MyLibrary::subtractOne() {
+    --mValue;
+}
+
 

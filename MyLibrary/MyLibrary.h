@@ -4,9 +4,13 @@
 class MyLibrary {
 
 public:
-    MyLibrary(int storedValue);
+    MyLibrary(int initialValue);
 
-    int getInt() const;
+    int getValue() const;
+
+    void addOne();
+
+    void subtractOne();
 
 private:
 
