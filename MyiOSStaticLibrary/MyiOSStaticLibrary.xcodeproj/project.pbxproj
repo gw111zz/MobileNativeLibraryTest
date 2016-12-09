@@ -6,9 +6,25 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		29A659381DFB045C00A5422E /* UniversalStaticLibrary */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 29A6593B1DFB045C00A5422E /* Build configuration list for PBXAggregateTarget "UniversalStaticLibrary" */;
+			buildPhases = (
+				29A6593D1DFB108900A5422E /* CopyFiles */,
+				29A6593C1DFB04A800A5422E /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = UniversalStaticLibrary;
+			productName = UniversalStaticLibrary;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		29A6591B1DEE2A1A00A5422E /* MyLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29A659191DEE2A1A00A5422E /* MyLibrary.cpp */; };
 		29A6591C1DEE2A1A00A5422E /* MyLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = 29A6591A1DEE2A1A00A5422E /* MyLibrary.h */; };
+		29A6593E1DFB10A300A5422E /* MyLibrary.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 29A6591A1DEE2A1A00A5422E /* MyLibrary.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -18,6 +34,16 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29A6593D1DFB108900A5422E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = include;
+			dstSubfolderSpec = 16;
+			files = (
+				29A6593E1DFB10A300A5422E /* MyLibrary.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +134,9 @@
 					29A659081DEE26F100A5422E = {
 						CreatedOnToolsVersion = 7.3.1;
 					};
+					29A659381DFB045C00A5422E = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
 				};
 			};
 			buildConfigurationList = 29A659041DEE26F100A5422E /* Build configuration list for PBXProject "MyiOSStaticLibrary" */;
@@ -123,9 +152,26 @@
 			projectRoot = "";
 			targets = (
 				29A659081DEE26F100A5422E /* MyiOSStaticLibrary */,
+				29A659381DFB045C00A5422E /* UniversalStaticLibrary */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		29A6593C1DFB04A800A5422E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Build iOS library\nxcodebuild -target MyiOSStaticLibrary ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk iphoneos BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\"\n# Build iPhone simulator library\nxcodebuild -target MyiOSStaticLibrary -configuration ${CONFIGURATION} -sdk iphonesimulator -arch i386 BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\"\n\n# Create output folder\nOUTPUT_FOLDER=${BUILD_DIR}/${CONFIGURATION}-universal\nmkdir -p \"${OUTPUT_FOLDER}\"\n\n# Create universal binary\nlipo -create -output \"${OUTPUT_FOLDER}/lib${PROJECT_NAME}.a\" \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/lib${PROJECT_NAME}.a\" \"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/lib${PROJECT_NAME}.a\"\n\ncp -R \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/include\" \"${OUTPUT_FOLDER}/\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		29A659051DEE26F100A5422E /* Sources */ = {
@@ -239,6 +285,20 @@
 			};
 			name = Release;
 		};
+		29A659391DFB045C00A5422E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		29A6593A1DFB045C00A5422E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -256,6 +316,15 @@
 			buildConfigurations = (
 				29A659131DEE26F200A5422E /* Debug */,
 				29A659141DEE26F200A5422E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		29A6593B1DFB045C00A5422E /* Build configuration list for PBXAggregateTarget "UniversalStaticLibrary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29A659391DFB045C00A5422E /* Debug */,
+				29A6593A1DFB045C00A5422E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
