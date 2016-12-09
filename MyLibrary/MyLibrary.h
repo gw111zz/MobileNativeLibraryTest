@@ -11,6 +11,8 @@ public:
     void addOne();
 
     void subtractOne();
+    
+    void resetToZero();
 
 private:
 

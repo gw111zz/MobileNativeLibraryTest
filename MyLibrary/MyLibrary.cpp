@@ -16,4 +16,6 @@ void MyLibrary::subtractOne() {
     --mValue;
 }
 
-
+void MyLibrary::resetToZero() {
+    mValue = 0;
+}
