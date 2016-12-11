@@ -22,9 +22,9 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		29A6591B1DEE2A1A00A5422E /* MyLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29A659191DEE2A1A00A5422E /* MyLibrary.cpp */; };
-		29A6591C1DEE2A1A00A5422E /* MyLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = 29A6591A1DEE2A1A00A5422E /* MyLibrary.h */; };
-		29A6593E1DFB10A300A5422E /* MyLibrary.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 29A6591A1DEE2A1A00A5422E /* MyLibrary.h */; };
+		29A659871DFE05A600A5422E /* MyLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29A659851DFE05A600A5422E /* MyLibrary.cpp */; };
+		29A659881DFE05A600A5422E /* MyLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = 29A659861DFE05A600A5422E /* MyLibrary.h */; };
+		29A6598A1DFE05B000A5422E /* MyLibrary.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 29A659861DFE05A600A5422E /* MyLibrary.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -43,7 +43,7 @@
 			dstPath = include;
 			dstSubfolderSpec = 16;
 			files = (
-				29A6593E1DFB10A300A5422E /* MyLibrary.h in CopyFiles */,
+				29A6598A1DFE05B000A5422E /* MyLibrary.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,8 +51,8 @@
 
 /* Begin PBXFileReference section */
 		29A659091DEE26F100A5422E /* libMyiOSStaticLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMyiOSStaticLibrary.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		29A659191DEE2A1A00A5422E /* MyLibrary.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MyLibrary.cpp; path = ../../MyLibrary/MyLibrary.cpp; sourceTree = "<group>"; };
-		29A6591A1DEE2A1A00A5422E /* MyLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyLibrary.h; path = ../../MyLibrary/MyLibrary.h; sourceTree = "<group>"; };
+		29A659851DFE05A600A5422E /* MyLibrary.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MyLibrary.cpp; path = ../MyLibrary/MyLibrary.cpp; sourceTree = SOURCE_ROOT; };
+		29A659861DFE05A600A5422E /* MyLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyLibrary.h; path = ../MyLibrary/MyLibrary.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,8 +85,8 @@
 		29A6590B1DEE26F200A5422E /* MyiOSStaticLibrary */ = {
 			isa = PBXGroup;
 			children = (
-				29A6591A1DEE2A1A00A5422E /* MyLibrary.h */,
-				29A659191DEE2A1A00A5422E /* MyLibrary.cpp */,
+				29A659861DFE05A600A5422E /* MyLibrary.h */,
+				29A659851DFE05A600A5422E /* MyLibrary.cpp */,
 			);
 			path = MyiOSStaticLibrary;
 			sourceTree = "<group>";
@@ -98,7 +98,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				29A6591C1DEE2A1A00A5422E /* MyLibrary.h in Headers */,
+				29A659881DFE05A600A5422E /* MyLibrary.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,7 +169,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Build iOS library\nxcodebuild -target MyiOSStaticLibrary ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk iphoneos BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\"\n# Build iPhone simulator library\nxcodebuild -target MyiOSStaticLibrary -configuration ${CONFIGURATION} -sdk iphonesimulator -arch i386 BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\"\n\n# Create output folder\nOUTPUT_FOLDER=${BUILD_DIR}/${CONFIGURATION}-universal\nmkdir -p \"${OUTPUT_FOLDER}\"\n\n# Create universal binary\nlipo -create -output \"${OUTPUT_FOLDER}/lib${PROJECT_NAME}.a\" \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/lib${PROJECT_NAME}.a\" \"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/lib${PROJECT_NAME}.a\"\n\ncp -R \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/include\" \"${OUTPUT_FOLDER}/\"\n";
+			shellScript = "# Build iOS library\nxcodebuild -target MyiOSStaticLibrary ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk iphoneos BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\"\n# Build iPhone simulator library\nxcodebuild -target MyiOSStaticLibrary -configuration ${CONFIGURATION} -sdk iphonesimulator -arch i386 BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\"\n\n# Create output folder\nOUTPUT_FOLDER=${BUILD_DIR}/${CONFIGURATION}-universal\nmkdir -p \"${OUTPUT_FOLDER}\"\n\n# Create universal binary\nlipo -create -output \"${OUTPUT_FOLDER}/lib${PROJECT_NAME}.a\" \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/lib${PROJECT_NAME}.a\" \"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/lib${PROJECT_NAME}.a\"\n\ncp -R \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/include\" \"${OUTPUT_FOLDER}/\"\nARCHIVE_FOLDER=\"${SRCROOT}/BuildOutput\"\nmkdir -p \"${ARCHIVE_FOLDER}\"\ncp -R \"${OUTPUT_FOLDER}\" \"${ARCHIVE_FOLDER}\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -178,7 +178,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				29A6591B1DEE2A1A00A5422E /* MyLibrary.cpp in Sources */,
+				29A659871DFE05A600A5422E /* MyLibrary.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,6 +327,7 @@
 				29A6593A1DFB045C00A5422E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
