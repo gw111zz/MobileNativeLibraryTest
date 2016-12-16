@@ -10,3 +10,9 @@ It consists of a few skeleton projects:
 4. MyiOSDemoApp - a basic iOS app which uses MyiOSStaticLibrary
 
 More coming soon...
+
+# TODO:
+
+* Make the iOS demo app call use the wrapper library
+* Hook all of this together into one build system
+
