@@ -24,7 +24,8 @@
 /* Begin PBXBuildFile section */
 		29A659871DFE05A600A5422E /* MyLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29A659851DFE05A600A5422E /* MyLibrary.cpp */; };
 		29A659881DFE05A600A5422E /* MyLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = 29A659861DFE05A600A5422E /* MyLibrary.h */; };
-		29A6598A1DFE05B000A5422E /* MyLibrary.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 29A659861DFE05A600A5422E /* MyLibrary.h */; };
+		29A6598C1E0003E500A5422E /* MyLibraryWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 29A6598B1E0003E500A5422E /* MyLibraryWrapper.h */; };
+		29A6598F1E0003FB00A5422E /* MyLibraryWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 29A6598E1E0003FB00A5422E /* MyLibraryWrapper.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -43,7 +44,6 @@
 			dstPath = include;
 			dstSubfolderSpec = 16;
 			files = (
-				29A6598A1DFE05B000A5422E /* MyLibrary.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +53,8 @@
 		29A659091DEE26F100A5422E /* libMyiOSStaticLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMyiOSStaticLibrary.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		29A659851DFE05A600A5422E /* MyLibrary.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MyLibrary.cpp; path = ../MyLibrary/MyLibrary.cpp; sourceTree = SOURCE_ROOT; };
 		29A659861DFE05A600A5422E /* MyLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyLibrary.h; path = ../MyLibrary/MyLibrary.h; sourceTree = SOURCE_ROOT; };
+		29A6598B1E0003E500A5422E /* MyLibraryWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLibraryWrapper.h; sourceTree = SOURCE_ROOT; };
+		29A6598E1E0003FB00A5422E /* MyLibraryWrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MyLibraryWrapper.mm; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,8 @@
 			children = (
 				29A659861DFE05A600A5422E /* MyLibrary.h */,
 				29A659851DFE05A600A5422E /* MyLibrary.cpp */,
+				29A6598B1E0003E500A5422E /* MyLibraryWrapper.h */,
+				29A6598E1E0003FB00A5422E /* MyLibraryWrapper.mm */,
 			);
 			path = MyiOSStaticLibrary;
 			sourceTree = "<group>";
@@ -98,6 +102,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29A6598C1E0003E500A5422E /* MyLibraryWrapper.h in Headers */,
 				29A659881DFE05A600A5422E /* MyLibrary.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -179,6 +184,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				29A659871DFE05A600A5422E /* MyLibrary.cpp in Sources */,
+				29A6598F1E0003FB00A5422E /* MyLibraryWrapper.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
