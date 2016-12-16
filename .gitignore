@@ -58,3 +58,18 @@ fastlane/screenshots
 # https://github.com/johnno1962/injectionforxcode
 
 iOSInjectionProject/
+
+# For this specific project
+CMakeCache.txt
+Makefile
+MyApp/CMakeFiles/
+MyApp/Makefile
+MyApp/MyApp
+MyApp/cmake_install.cmake
+MyLibrary/CMakeFiles/
+MyLibrary/Makefile
+MyLibrary/cmake_install.cmake
+MyLibrary/libMyLibrary.a
+MyiOSStaticLibrary/BuildOutput/
+cmake_install.cmake
+CMakeFiles/
