@@ -22,11 +22,23 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		2963A4231E1E607600707BFF /* UnitTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2963A4221E1E607600707BFF /* UnitTests.mm */; };
+		2963A4251E1E607600707BFF /* libMyiOSStaticLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29A659091DEE26F100A5422E /* libMyiOSStaticLibrary.a */; };
 		29A659871DFE05A600A5422E /* MyLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29A659851DFE05A600A5422E /* MyLibrary.cpp */; };
 		29A659881DFE05A600A5422E /* MyLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = 29A659861DFE05A600A5422E /* MyLibrary.h */; };
 		29A6598C1E0003E500A5422E /* MyLibraryWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 29A6598B1E0003E500A5422E /* MyLibraryWrapper.h */; };
 		29A6598F1E0003FB00A5422E /* MyLibraryWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 29A6598E1E0003FB00A5422E /* MyLibraryWrapper.mm */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2963A4261E1E607600707BFF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29A659011DEE26F100A5422E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 29A659081DEE26F100A5422E;
+			remoteInfo = MyiOSStaticLibrary;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		29A659071DEE26F100A5422E /* CopyFiles */ = {
@@ -50,6 +62,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2963A4201E1E607600707BFF /* UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2963A4221E1E607600707BFF /* UnitTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = UnitTests.mm; sourceTree = "<group>"; };
+		2963A4241E1E607600707BFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		29A659091DEE26F100A5422E /* libMyiOSStaticLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMyiOSStaticLibrary.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		29A659851DFE05A600A5422E /* MyLibrary.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MyLibrary.cpp; path = ../MyLibrary/MyLibrary.cpp; sourceTree = SOURCE_ROOT; };
 		29A659861DFE05A600A5422E /* MyLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyLibrary.h; path = ../MyLibrary/MyLibrary.h; sourceTree = SOURCE_ROOT; };
@@ -58,6 +73,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2963A41D1E1E607600707BFF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2963A4251E1E607600707BFF /* libMyiOSStaticLibrary.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		29A659061DEE26F100A5422E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -68,10 +91,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2963A4211E1E607600707BFF /* UnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				2963A4221E1E607600707BFF /* UnitTests.mm */,
+				2963A4241E1E607600707BFF /* Info.plist */,
+			);
+			path = UnitTests;
+			sourceTree = "<group>";
+		};
 		29A659001DEE26F100A5422E = {
 			isa = PBXGroup;
 			children = (
 				29A6590B1DEE26F200A5422E /* MyiOSStaticLibrary */,
+				2963A4211E1E607600707BFF /* UnitTests */,
 				29A6590A1DEE26F100A5422E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -80,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				29A659091DEE26F100A5422E /* libMyiOSStaticLibrary.a */,
+				2963A4201E1E607600707BFF /* UnitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -110,6 +144,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		2963A41F1E1E607600707BFF /* UnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2963A4281E1E607600707BFF /* Build configuration list for PBXNativeTarget "UnitTests" */;
+			buildPhases = (
+				2963A41C1E1E607600707BFF /* Sources */,
+				2963A41D1E1E607600707BFF /* Frameworks */,
+				2963A41E1E1E607600707BFF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2963A4271E1E607600707BFF /* PBXTargetDependency */,
+			);
+			name = UnitTests;
+			productName = UnitTests;
+			productReference = 2963A4201E1E607600707BFF /* UnitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		29A659081DEE26F100A5422E /* MyiOSStaticLibrary */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 29A659121DEE26F200A5422E /* Build configuration list for PBXNativeTarget "MyiOSStaticLibrary" */;
@@ -136,6 +188,9 @@
 			attributes = {
 				LastUpgradeCheck = 0730;
 				TargetAttributes = {
+					2963A41F1E1E607600707BFF = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
 					29A659081DEE26F100A5422E = {
 						CreatedOnToolsVersion = 7.3.1;
 					};
@@ -158,9 +213,20 @@
 			targets = (
 				29A659081DEE26F100A5422E /* MyiOSStaticLibrary */,
 				29A659381DFB045C00A5422E /* UniversalStaticLibrary */,
+				2963A41F1E1E607600707BFF /* UnitTests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2963A41E1E1E607600707BFF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
 		29A6593C1DFB04A800A5422E /* ShellScript */ = {
@@ -179,6 +245,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		2963A41C1E1E607600707BFF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2963A4231E1E607600707BFF /* UnitTests.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		29A659051DEE26F100A5422E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -190,7 +264,35 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		2963A4271E1E607600707BFF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 29A659081DEE26F100A5422E /* MyiOSStaticLibrary */;
+			targetProxy = 2963A4261E1E607600707BFF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		2963A4291E1E607600707BFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = UnitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.UnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2963A42A1E1E607600707BFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = UnitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.UnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		29A659101DEE26F200A5422E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -308,6 +410,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2963A4281E1E607600707BFF /* Build configuration list for PBXNativeTarget "UnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2963A4291E1E607600707BFF /* Debug */,
+				2963A42A1E1E607600707BFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		29A659041DEE26F100A5422E /* Build configuration list for PBXProject "MyiOSStaticLibrary" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -5,7 +5,7 @@ This is a skeleton / template project created to experiment with how a C++ libra
 It consists of a few skeleton projects:
 
 1. MyLibrary - a C++ library built using CMake
-2. MyApp - A basic console app built using CMake that uses MyLibrary
+2. MyApp - A basic desktop console app built using CMake that uses MyLibrary
 3. MyiOSStaticLibrary - an XCode project configured to build MyLibrary into a universal binrary usable on the iOS Simulator and an iPhone/iPad
 4. MyiOSDemoApp - a basic iOS app which uses MyiOSStaticLibrary
 

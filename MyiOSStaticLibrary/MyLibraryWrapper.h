@@ -1,5 +1,5 @@
 #import <Foundation/Foundation.h>
-#import "MyLibrary.h"
+#include "MyLibrary.h"
 
 @interface MyLibraryWrapper : NSObject
 
