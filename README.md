@@ -13,6 +13,7 @@ More coming soon...
 
 # TODO:
 
-* Make the iOS demo app call use the wrapper library
+* Java access to the C++ library
 * Hook all of this together into one build system
+
 
