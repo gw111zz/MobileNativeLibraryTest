@@ -4,6 +4,7 @@ project(iOSLibraryTest)
 
 add_subdirectory(MyLibrary)
 add_subdirectory(MyApp)
+add_subdirectory(MyJavaLibrary)
 
 
 
