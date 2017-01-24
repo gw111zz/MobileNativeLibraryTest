@@ -1,10 +1,10 @@
 package com.example.myjavawrapper;
 
-public class MyJavaWrapper {
+public class JavaLibraryWrapper {
 
     private long mNativePtr;
 
-    public MyJavaWrapper(int initialValue) {
+    public JavaLibraryWrapper(int initialValue) {
         mNativePtr = createNativeLibraryObject(initialValue);
         if (mNativePtr == 0) {
             // TODO: throw
