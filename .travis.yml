@@ -1,7 +1,29 @@
-language: cpp
-compiler: 
-    - clang
-    - gcc
-script:
-    cmake . && make
+#sudo: required
 
+os:
+ - linux
+
+language: cpp
+
+compiler:
+ - gcc
+ - clang
+
+matrix:
+ include:
+  - env: CXX=g++ CC=gcc
+  - env: CXX=clang++ CC=clang
+
+before_script:
+ - cmake .
+
+script: 
+ - make
+
+addons:
+ apt:
+  sources:
+   - george-edison55-precise-backports
+  packages:
+   - cmake
+   - cmake-data
