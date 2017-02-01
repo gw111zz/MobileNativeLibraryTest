@@ -8,6 +8,7 @@ It consists of a few skeleton projects:
 2. MyApp - A basic desktop console app built using CMake that uses MyLibrary
 3. MyiOSStaticLibrary - an XCode project configured to build MyLibrary into a universal binrary usable on the iOS Simulator and an iPhone/iPad
 4. MyiOSDemoApp - a basic iOS app which uses MyiOSStaticLibrary
+5. MyJavaLibrary - a Java wrapper for the C++ library which accesses it via JNI
 
 More coming soon...
 
