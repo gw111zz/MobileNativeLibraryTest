@@ -9,11 +9,6 @@ compiler:
  - gcc
  - clang
 
-matrix:
- include:
-  - env: CXX=g++ CC=gcc
-  - env: CXX=clang++ CC=clang
-
 before_script:
  - cmake .
 
