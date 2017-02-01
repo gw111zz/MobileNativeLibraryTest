@@ -1,5 +1,7 @@
 # Native Library On Mobile Test
 
+![Build](https://travis-ci.org/gw111zz/MobileNativeLibraryTest.svg?branch=master)
+
 This is a skeleton / template project created to experiment with how a C++ library can be created and then used on mobile platforms.
 
 It consists of a few skeleton projects:
