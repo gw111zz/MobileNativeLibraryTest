@@ -17,4 +17,5 @@ message(STATUS "CMAKE_ARCHIVE_OUTPUT_DIRECTORY=${CMAKE_ARCHIVE_OUTPUT_DIRECTORY}
 add_subdirectory(MyLibrary)
 add_subdirectory(MyApp)
 add_subdirectory(MyJavaLibrary)
+add_subdirectory(MyJavaApp)
 

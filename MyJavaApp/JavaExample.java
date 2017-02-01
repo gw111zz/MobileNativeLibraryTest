@@ -1,4 +1,4 @@
-package com.example.myjavawrapper;
+import com.example.myjavawrapper.JavaLibraryWrapper;
 
 class JavaExample {
 
@@ -7,7 +7,7 @@ class JavaExample {
     }
 
     public static void main(String[] args) {
-        MyJavaWrapper wrapper = new MyJavaWrapper(2);
+        JavaLibraryWrapper wrapper = new JavaLibraryWrapper(2);
         System.out.println("Initial value: " + wrapper.getValue());
         wrapper.addOne();
         System.out.println("Add one, new value: " + wrapper.getValue());
