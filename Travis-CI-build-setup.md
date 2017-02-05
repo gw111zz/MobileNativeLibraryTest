@@ -5,14 +5,17 @@ is built using two C++ compilers on each.
 
 ## Linux (gcc, clang)
 
+```
   +-------------------+    +-----------------------+
   |                   |    |                       |
   | Build C++ library +--->+ Build C++ console app |
   |                   |    |                       |
   +-------------------+    +-----------------------+
+```
 
 ## OSX (gcc, clang)
 
+```
   +-------------------+    +-----------------------+   +---------------------+
   |                   |    |                       |   |                     |
   | Build C++ library +--->+ Build C++ console app +-->+ Build Obj-C library |
@@ -25,5 +28,5 @@ is built using two C++ compilers on each.
           | Run iOS UI tests +<---+ Build iOS app +<---+ Run ObjC unit tests |
           |                  |    |               |    |                     |
           +------------------+    +---------------+    +---------------------+
-  
+```  
 
