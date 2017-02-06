@@ -432,7 +432,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				HEADER_SEARCH_PATHS = "${SRCROOT}/../MyiOSStaticLibrary/BuildOutput/Release-universal/include";
+				HEADER_SEARCH_PATHS = "${SRCROOT}/../MyiOSStaticLibrary/BuildOutput/Release-universal/include/**";
 				INFOPLIST_FILE = MyiOSDemoApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				"LIBRARY_SEARCH_PATHS[arch=*]" = "${SRCROOT}/../MyiOSStaticLibrary/BuildOutput/Release-universal";
