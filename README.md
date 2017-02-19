@@ -14,6 +14,10 @@ It consists of a few skeleton projects:
 
 More coming soon...
 
+# Cloning this project
+
+  git clone --recursive https://github.com/gw111zz/MobileNativeLibraryTest.git
+
 # TODO:
 
 * Java access to the C++ library
