@@ -1,0 +1,11 @@
+
+my_library_interface = interface +c {
+
+    getValue(): i32;
+    addOne();
+    subtractOne();
+    resetToZero();
+}
+
+
+
