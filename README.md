@@ -21,6 +21,5 @@ More coming soon...
 # TODO:
 
 * Java access to the C++ library
-* Setup Travis-CI
 * Hook all of this together into one build system
 
